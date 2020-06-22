@@ -1,0 +1,25 @@
+<h1 class="display-4 text-center m-4" style="font-weight: bold; font-family: monospace;">List of jobs</h1>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <th>Job Name</th>
+        <th>Part Id</th>
+        <th>QTY</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <% jobs.forEach(function(job){ %>
+        <tr>
+            <td><%= job.jobName062 %></td>
+            <td><%= job.partId062 %></td>
+            <td><%= job.qty062 %></td>
+            <td>
+                <a href="/jobs062/edit/<%= job.jobName062 %>" class="btn btn-primary">Edit</a>
+                <form class="d-inline" action="/jobs062/delete/<%= job.jobName062 %>" method="post">
+                <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+
+</table>

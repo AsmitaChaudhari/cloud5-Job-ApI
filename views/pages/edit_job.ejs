@@ -1,0 +1,30 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/jobs062/getAll">Jobs</a></li>
+    <li class="breadcrumb-item active">Edit</li>
+</ol>
+<h1 class="display-4">Edit Jobs</h1>
+<div class="container" >
+<form method="post" action="/jobs062/update" class="bg-light" >
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="Job Name">Job Name</label>
+                <input type="text" name="jobName062" readonly class="form-control" value="<%= job.jobName062 %>">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="Part Id">Part Id</label>
+                <input type="text" name="partId062" readonly class="form-control" value="<%= job.partId062 %>">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="quantity">quantity</label>
+        <input type="text" name="qty062" class="form-control" value="<%= job.qty062 %>" required>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
+</div>
