@@ -1,20 +1,24 @@
-<ol class="breadcrumb">
+<ol class="breadcrumb" >
     <li class="breadcrumb-item"><a href="/jobs062/getAll">Jobs</a></li>
     <li class="breadcrumb-item active">Add Jobs</li>
 </ol>
-<h1 class="display-4">Add Jobs</h1>
-<form method="post" action="/jobs062/create">
-    <div class="form-group">
-        <label for="Job Name">Job Name</label>
-        <input type="text" name="jobName062" class="form-control" required>
-    </div>
-    <div class="form-group">
-        <label for="Part Id">Part Id</label>
-        <input type="text" name="partId062" class="form-control" required>
-    </div>
-    <div class="form-group">
-        <label for="quantity">quantity</label>
-        <input type="text" name="qty062" class="form-control" required>
-    </div>
-    <input type="submit" value="Submit" class="btn btn-primary">
-</form>
+
+<h1 class="display-4 text-center mb-4" style="font-weight: bold; font-family: monospace;">Add Jobs</h1>
+
+<div class="container" style="box-shadow: 0px 0px 5px gray; padding: 2rem; border-radius: 5px;">
+    <form method="post" action="/jobs062/create"  class="from">
+        <div class="form-group">
+            <label for="Job Name">JobName062:</label>
+            <input type="text" name="jobName062" class="form-control" pattern=".*\d+.*\s*"  title="Job Name Must Be Alpha Numeric, Example: job1062" placeholder="Enter Job Name" required>
+        </div>
+        <div class="form-group">
+            <label for="Part Id">PartId062:</label>
+            <input type="number" name="partId062" class="form-control"  placeholder="Enter Part ID" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity062:</label>
+            <input type="number" name="qty062" class="form-control" placeholder="Enter Quantity" required>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>

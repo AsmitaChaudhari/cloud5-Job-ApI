@@ -2,19 +2,19 @@
     <li class="breadcrumb-item"><a href="/jobs062/getAll">Jobs</a></li>
     <li class="breadcrumb-item active">Edit</li>
 </ol>
-<h1 class="display-4">Edit Jobs</h1>
-<div class="container" >
-<form method="post" action="/jobs062/update" class="bg-light" >
+<h1 class="display-4 text-center mb-4" style="font-weight: bold; font-family: monospace;">Edit Jobs</h1>
+<div class="container" style="box-shadow: 0px 0px 5px gray; padding: 2rem; border-radius: 5px;">
+<form method="post" action="/jobs062/update" >
     <div class="row">
         <div class="col">
             <div class="form-group">
-                <label for="Job Name">Job Name</label>
+                <label for="Job Name">JobName062:</label>
                 <input type="text" name="jobName062" readonly class="form-control" value="<%= job.jobName062 %>">
             </div>
         </div>
         <div class="col">
             <div class="form-group">
-                <label for="Part Id">Part Id</label>
+                <label for="Part Id">PartId:</label>
                 <input type="text" name="partId062" readonly class="form-control" value="<%= job.partId062 %>">
             </div>
         </div>
@@ -22,7 +22,7 @@
 
 
     <div class="form-group">
-        <label for="quantity">quantity</label>
+        <label for="quantity">Quantity:</label>
         <input type="text" name="qty062" class="form-control" value="<%= job.qty062 %>" required>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary">

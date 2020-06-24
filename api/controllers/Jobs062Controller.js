@@ -10,7 +10,7 @@ module.exports = {
     getAll:function(req062, res062){
        Jobs062.find({}).exec( function (err, jobs) {
            if(err){
-               res062.send(400, {error: 'Bad Request'});
+               res062.status(400).send({error: 'Bad Request'});
            }
            res062.view('pages/job_list',{jobs:jobs});
            

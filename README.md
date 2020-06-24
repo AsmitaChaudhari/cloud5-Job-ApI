@@ -1,16 +1,19 @@
 # cloud-assignment-5
 
+## Application Links
+- [App on Azure](https://asmitacloud5.azurewebsites.net/)
+- [App on AWS Elastic beanstalk](http://cloud5-env.eba-v8gpwy25.us-east-1.elasticbeanstalk.com/)
+
 ### Author - [Asmita Chaudhari - B00835062](asmita.chaudhari@dal.ca)
 
 - Created : June 19, 2020
-- Last Modified : June 22, 2020
+- Last Modified : June 24, 2020
 
 ## Description
 Jobs API web application is developed as part of course work of cloud computing subject.This application shows the JOBs information.This jobs information includes job name, part id and quantity. User can add new jobs or delete existing jobs in database. Apart from that user can update the quantity of the specific job.
 
 Database for the application is hosted on the Azure database using My SQL workbench. The application is containerized using docker and deployed on Azure web service platform.
 
-[Application]( https://asmitacloud5.azurewebsites.net/)
 
 a [Sails v1](https://sailsjs.com) application
 
