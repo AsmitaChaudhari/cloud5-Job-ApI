@@ -11,6 +11,15 @@
 const Jobs062Controller = require("../api/controllers/Jobs062Controller");
 
 module.exports.routes = {
+  
+  '/': { view: 'pages/homepage' },
+  '/jobs062/getAll' : Jobs062Controller.getAll,
+  '/jobs062/addJob' : Jobs062Controller.addJob,
+  '/jobs062/delete/:jobName062' : Jobs062Controller.delete,
+  '/jobs062/edit/:jobName062' : Jobs062Controller.edit,
+  '/jobs062/edit' : Jobs062Controller.update,
+ 
+  
 
   /***************************************************************************
   *                                                                          *
@@ -21,13 +30,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
-  '/jobs062/getAll' : Jobs062Controller.getAll,
-  '/jobs062/addJob' : Jobs062Controller.addJob,
-  '/jobs062/delete/:jobName062' : Jobs062Controller.delete,
-  '/jobs062/edit/:jobName062' : Jobs062Controller.edit,
-  '/jobs062/edit' : Jobs062Controller.update,
- 
   
 
 

@@ -10,7 +10,7 @@ module.exports = {
     getAll:function(req062, res062){
        Jobs062.find({}).exec( function (err, jobs) {
            if(err){
-               res062.status(400).send({error: 'Bad Request'});
+               res062.status(500).send({error: 'Bad Request'});
            }
            res062.view('pages/job_list',{jobs:jobs});
            
@@ -29,16 +29,17 @@ module.exports = {
         
         Jobs062.create({jobName062:jobName062, partId062:partId062, qty062:qty062}).exec(function(err){
             if(err){
-                res062.status(400).send({error: 'Bad Request'});
+                //res062.status(500).send({error: 'Bad Request'});
+                res062.serverError('Job Already Exists');
             }
             res062.redirect('getAll');
-        })
+        });
     },
 
     delete:function(req062, res062){
         Jobs062.destroy({jobName062:req062.params.jobName062}).exec(function(err){
             if(err){
-                res062.status(400).send({error: 'Bad Request'});
+                res062.status(500).send({error: 'Bad Request'});
             }
             res062.redirect('/jobs062/getAll');
         });
@@ -48,7 +49,7 @@ module.exports = {
     edit: function(req062, res062){
         Jobs062.findOne({jobName062:req062.params.jobName062}).exec(function(err, job){
             if(err){
-                res062.status(400).send({error: 'Bad request'});
+                res062.status(500).send({error: 'Bad request'});
             }
             res062.view('pages/edit_job',{job:job});
         });
@@ -62,7 +63,7 @@ module.exports = {
            
            Jobs062.update({jobName062:req062.body.jobName062},{jobName062:jobName062, partId062:partId062, qty062:qty062}).exec(function(err){
                if(err){
-                   res062.status(400).send({error: 'Bad Request'});
+                   res062.status(500).send({error: 'Bad Request'});
                }
                res062.redirect('/jobs062/getAll');
            });

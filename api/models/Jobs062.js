@@ -9,8 +9,6 @@ module.exports = {
 
   attributes: {
 
-    //id: { type: 'string', columnName: 'jobName062' },
-    
     jobName062 : {
       type: 'string',
       required : true
@@ -25,9 +23,6 @@ module.exports = {
   },
 primaryKey : 'jobName062',
 tableName : 'jobs062',
-
-
-  // datastore: 'default'
 
 };
 

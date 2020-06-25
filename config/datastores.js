@@ -49,19 +49,14 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
    
-
+    //url: 'mysql://root:root@localhost:3306/chaudhari'
       adapter: 'sails-mysql',
-      //url: 'mysql://root:root@localhost:3306/chaudhari'
-
-     // adapter: 'sails-mysql',
+     
       host: 'azureasmita.mysql.database.azure.com',
       user : 'Asmita_cloud5@azureasmita',
       password : 'Azure@123',
       database : 'chaudhari',
       port : '3306'
-      //url: 'mysql://Asmita_cloud5@azureasmita:Azure_123@azureasmita.mysql.database.azure.com:3306/chaudhari',
-  
-   
     
   },
 
